@@ -1,8 +1,8 @@
-const name = document.getElementById("name").value;
-const phone = document.getElementById("phone").value;
-const email = document.getElementById("email").value;
-const contactForm = document.getElementById("contactForm");
-const contactList = document.getElementById("contactList");
+let named = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let email = document.getElementById("email").value;
+let contactForm = document.getElementById("contactForm");
+let contactList = document.getElementById("contactList");
 
 // class to create a contact
 class Contact {
@@ -77,9 +77,9 @@ function deleteuserid(index) {
 //this listens to the form when it is submitted
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const email = document.getElementById("email").value;
+  named = document.getElementById("name").value;
+  phone = document.getElementById("phone").value;
+  email = document.getElementById("email").value;
   const newContact = new Contact(name, phone, email);
   contactManager.addContact(newContact);
   contactForm.reset();
